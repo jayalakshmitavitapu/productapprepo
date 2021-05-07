@@ -32,8 +32,8 @@ private ProductDao productDao;
 		return productDao.deleteProduct(pid);
 	}
 	@Override
-	public int updatePoduct(int pid) {
-		return productDao.updatePoduct(pid);
+	public int updateProduct(int pid,Product product) {
+		return productDao.updateProduct(pid,product);
 	
 	}
 
