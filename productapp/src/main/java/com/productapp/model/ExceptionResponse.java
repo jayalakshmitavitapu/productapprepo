@@ -3,22 +3,37 @@ package com.productapp.model;
 
 import java.time.LocalDateTime;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 
 public class ExceptionResponse {
- private String message;
-private LocalDateTime dateTime;
+	  private String errorMessage;
+	    private String errorCode;
+	    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy hh:mm:ss")
+	    private LocalDateTime timestamp;
 
-public String getMessage() {
-    return message;
-}
-public void setMessage(String message) {
-    this.message = message;
-}
-public LocalDateTime getDateTime() {
-    return dateTime;
-}
-public void setDateTime(LocalDateTime dateTime) {
-    this.dateTime = dateTime;
-}    
-}
+	    public String getErrorMessage() {
+	        return errorMessage;
+	    }
 
+	    public void setErrorMessage(String errorMessage) {
+	        this.errorMessage = errorMessage;
+	    }
+
+	    public String getErrorCode() {
+	        return errorCode;
+	    }
+
+	    public void setErrorCode(String errorCode) {
+	        this.errorCode = errorCode;
+	    }
+
+	    public LocalDateTime getTimestamp() {
+	        return timestamp;
+	    }
+
+	    public void setTimestamp(LocalDateTime timestamp) {
+	        this.timestamp = timestamp;
+	    }
+
+}
